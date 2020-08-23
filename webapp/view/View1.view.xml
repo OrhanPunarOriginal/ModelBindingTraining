@@ -1,0 +1,52 @@
+<mvc:View controllerName="Training.Training.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm id="SimpleFormChange354" minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="Address"
+								labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+								<f:content>
+									<Label text="Name"/>
+									<Input value="{SupplierName}"/>
+									<Label text="Street/No."/>
+									<Input value="{Street}"></Input>
+									<Input value="{HouseNumber}">
+										<layoutData>
+											<l:GridData span="L2 M2 S4"/>
+										</layoutData>
+									</Input>
+									<Label text="ZIP Code/City"/>
+									<Input value="{ZIPCode}">
+										<layoutData>
+											<l:GridData span="L2 M2 S4"/>
+										</layoutData>
+									</Input>
+									<Input value="{City}"/>
+									<Label text="Country"/>
+									<Select width="100%" id="idSelect" items="{ path: '/ProductSet' }">
+										<core:Item key="{ProductId}" text="{Name}"/>
+									</Select>
+									<Select width="100%" id="idSelectModel2" items="{ path: 'zzz>/' }">
+										<core:Item key="{zzz>ProductId}" text="{zzz>Name}"/>
+									</Select>
+								</f:content>
+							</f:SimpleForm>
+						</VBox>
+					</content>
+					<footer>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button text="Accept" type="Accept"/>
+							<Button text="Reject" type="Reject"/>
+							<Button text="Edit"/>
+							<Button text="Delete"/>
+						</Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
