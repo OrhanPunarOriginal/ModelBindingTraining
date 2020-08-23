@@ -17,7 +17,7 @@ sap.ui.define([
 
 		},
 		loadCategory: function () {
-			debugger;
+
 			var getCategory = this.getView().getModel();
 			oView = this.getView();
 			getCategory.read("/ProductSet", {
