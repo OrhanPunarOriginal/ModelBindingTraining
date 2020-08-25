@@ -23,7 +23,7 @@ sap.ui.define([
 
 		onSave: function (oEvent) {
 			debugger;
-			debugger;
+
 			var createPerson = this.getView().getModel();
 			var newProduct = new sap.ui.model.json.JSONModel();
 			var price = this.getView().byId("ProductPrice").getValue();
