@@ -9,28 +9,21 @@
 							<f:SimpleForm id="SimpleFormChange354" minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="Address"
 								labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
 								<f:content>
-									<Label text="Name"/>
-									<Input value="{SupplierName}"/>
-									<Label text="Street/No."/>
-									<Input value="{Street}"></Input>
-									<Input value="{HouseNumber}">
-										<layoutData>
-											<l:GridData span="L2 M2 S4"/>
-										</layoutData>
-									</Input>
-									<Label text="ZIP Code/City"/>
-									<Input value="{ZIPCode}">
-										<layoutData>
-											<l:GridData span="L2 M2 S4"/>
-										</layoutData>
-									</Input>
-									<Input value="{City}"/>
-									<Label text="Country"/>
-									<Select width="100%" id="idSelect" items="{ path: '/ProductSet' }">
-										<core:Item key="{ProductId}" text="{Name}"/>
+									<Label text="Product Name"/>
+									<Input value="" required="true" id="ProductName"/>
+									<Label text="Category"/>
+									<Select width="100%" id="categorySelect2" items="{ path: 'selectCategory>/' }">
+										<core:Item key="{selectCategory>key}" text="{selectCategory>Category}"/>
 									</Select>
-									<Select width="100%" id="idSelectModel2" items="{ path: 'zzz>/' }">
-										<core:Item key="{zzz>ProductId}" text="{zzz>Name}"/>
+									<Label text="Business partner ID"/>
+									<Select width="100%" id="supplierIDSelect" items="{ path: 'zzz>/' }">
+										<core:Item key="{zzz>ProductID}" text="{zzz>SupplierID}"/>
+									</Select>
+									<Label text="Price"/>
+									<Input value="" required="true" id="ProductPrice"/>
+									<Label text="Currency Type"/>
+									<Select width="100%" id="idSelectModel2" items="{ path: 'selectCurrencyCode>/' }">
+										<core:Item key="{selectCurrencyCode>Key}" text="{selectCurrencyCode>CurrencyCode}"/>
 									</Select>
 								</f:content>
 							</f:SimpleForm>
@@ -39,7 +32,7 @@
 					<footer>
 						<Toolbar>
 							<ToolbarSpacer/>
-							<Button text="Accept" type="Accept"/>
+							<Button text="Accept" type="Accept" press="onSave"/>
 							<Button text="Reject" type="Reject"/>
 							<Button text="Edit"/>
 							<Button text="Delete"/>
