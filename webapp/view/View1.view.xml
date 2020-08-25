@@ -20,7 +20,7 @@
 										<core:Item key="{zzz>ProductID}" text="{zzz>SupplierID}"/>
 									</Select>
 									<Label text="Price"/>
-									<Input value="" required="true" id="ProductPrice"/>
+									<Input value="" required="true" id="ProductPrice" type="Number"/>
 									<Label text="Currency Type"/>
 									<Select width="100%" id="idSelectModel2" items="{ path: 'selectCurrencyCode>/' }">
 										<core:Item key="{selectCurrencyCode>Key}" text="{selectCurrencyCode>CurrencyCode}"/>
@@ -28,6 +28,7 @@
 								</f:content>
 							</f:SimpleForm>
 						</VBox>
+						<core:Fragment fragmentName="Training.Training.view.formDisplay" type="XML" id="prefix1"/>
 					</content>
 					<footer>
 						<Toolbar>
